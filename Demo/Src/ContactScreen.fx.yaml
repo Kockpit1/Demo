@@ -21,7 +21,7 @@
         ZIndex: =2
 
     "Gallery9 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =959
+        Height: =425
         Items: =Contacts
         Layout: =Layout.Vertical
         OnSelect: =If(ThisItem.'Full Name' in GallerySelectedCollection.'Full Name', Remove(GallerySelectedCollection,ThisItem),Collect(GallerySelectedCollection,ThisItem))
