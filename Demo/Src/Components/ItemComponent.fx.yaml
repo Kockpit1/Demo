@@ -1,0 +1,68 @@
+ItemComponent As CanvasComponent:
+    DefaultIn: =0
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Max(App.Height, App.MinScreenHeight)/4
+    OnReset: =Set(MyPurchaseNo,ItemComponent.DefaultIn)
+    OutNumber: =TextInput1.Text
+    Width: =Max(App.Width, App.MinScreenWidth)/2
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    TextInput1 As text:
+        Default: =If(IsBlank(MyPurchaseNo),ItemComponent.DefaultIn,MyPurchaseNo)
+        Height: =93.70
+        PaddingBottom: =3.75
+        PaddingLeft: =9.00
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =18.74
+        Width: =199
+        X: =40
+        Y: =29.99
+        ZIndex: =1
+
+    Button3 As button:
+        FontWeight: =FontWeight.Bold
+        Height: =93.70
+        OnSelect: =Set(MyPurchaseNo,TextInput1.Text+1)
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =26.24
+        Text: ="+"
+        Width: =201
+        X: =240
+        Y: =29.99
+        ZIndex: =2
+
+    Button4 As button:
+        FontWeight: =FontWeight.Bold
+        Height: =93.70
+        OnSelect: |-
+            =If(
+                MyPurchaseNo <= 0,
+                ItemComponent.DefaultIn,
+                Set(
+                    MyPurchaseNo,
+                    TextInput1.Text - 1
+                )
+            )
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =26.24
+        Text: ="-"
+        Width: =201
+        X: =441
+        Y: =29.99
+        ZIndex: =3
+

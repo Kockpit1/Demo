@@ -1,0 +1,150 @@
+"Screen3_1 As screen.'tabletLayout_HeaderAndGallery_ver3.0'":
+    OnVisible: |-
+        =ClearCollect(dept,{Result:"All"});Collect(dept,Distinct('Employee Info',Department))
+
+    "TemplateGalleryList1_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =496.26
+        Items: =If(Dropdown1_1.Selected.Result="All",'Employee Info', Filter('Employee Info',Department=Dropdown1_1.Selected.Result))
+        Layout: =Layout.Vertical
+        TemplatePadding: =0.00
+        TemplateSize: =108.70
+        Width: =676
+        Y: =79.46
+        ZIndex: =1
+
+        Title7_1 As label:
+            Height: =26.99
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14.99
+            Text: =ThisItem.'Name (Title)'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =11.99
+            ZIndex: =1
+
+        Subtitle5_1 As label:
+            Height: =24.29
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =13.49
+            Text: =ThisItem.'Mobile No'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =40.48
+            ZIndex: =2
+
+        Separator6_1 As rectangle:
+            Height: =0.75
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =107.95
+            ZIndex: =5
+
+        Icon12_1 As icon.Trash:
+            Height: =47.98
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Select(Parent);UpdateContext({showDial:true})
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            X: =572
+            Y: =19.49
+            ZIndex: =6
+
+    RectQuickActionBar2_1 As rectangle:
+        Height: =47.98
+        Width: =Parent.Width
+        Y: =0.00
+        ZIndex: =2
+
+    Title1_1 As label:
+        Align: =Align.Center
+        Height: =47.98
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        PaddingRight: =10
+        Size: =13.49
+        Text: ="App name"
+        Width: =Parent.Width
+        Y: =0.00
+        ZIndex: =3
+
+    Dropdown1_1 As dropdown:
+        Height: =35.98
+        Items: =dept//Distinct('Employee Info',Department)
+        PaddingBottom: =7.50
+        PaddingLeft: =7.50
+        Size: =9.75
+        Width: =50
+        X: =717
+        Y: =133.43
+        ZIndex: =4
+
+    dial As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        Rectangle2 As rectangle:
+            Fill: =RGBA(179, 179, 179, 0.55)
+            Height: =575.72
+            Visible: =showDial
+            Width: =768
+            Y: =0.00
+            ZIndex: =9
+
+        Label15 As label:
+            Align: =Align.Center
+            Fill: =RGBA(232, 232, 81, 1)
+            Height: =162.67
+            PaddingBottom: =3.75
+            PaddingLeft: =3.75
+            Size: =13.49
+            Text: ="Are You sure you want to delete?"
+            Visible: =showDial
+            Width: =768
+            X: =169
+            Y: =239.88
+            ZIndex: =10
+
+        Button8 As button:
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =29.99
+            OnSelect: |-
+                =UpdateContext({showDial:false})
+            PaddingBottom: =3.75
+            PaddingLeft: =3.75
+            Size: =11.24
+            Text: ="Yes"
+            Visible: =showDial
+            Width: =768
+            X: =608
+            Y: =415.30
+            ZIndex: =11
+
+        Button9 As button:
+            Fill: =RGBA(255, 0, 0, 1)
+            Height: =29.99
+            OnSelect: |-
+                =UpdateContext({showDial:false})
+            PaddingBottom: =3.75
+            PaddingLeft: =3.75
+            Size: =11.24
+            Text: ="No"
+            Visible: =showDial
+            Width: =768
+            X: =608
+            Y: =415.30
+            ZIndex: =12
+

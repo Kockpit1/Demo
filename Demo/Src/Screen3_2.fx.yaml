@@ -1,0 +1,170 @@
+"Screen3_2 As screen.'tabletLayout_HeaderAndGallery_ver3.0'":
+    OnVisible: |-
+        =ClearCollect(dept,{Result:"All"});Collect(dept,Distinct('Employee Info',Department))
+
+    "TemplateGalleryList1_2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        Height: =575.72
+        Items: =If(Dropdown1_2.Selected.Result="All",'Employee Info', Filter('Employee Info',Department=Dropdown1_2.Selected.Result))
+        Layout: =Layout.Vertical
+        TemplatePadding: =0.00
+        TemplateSize: =108.70
+        Width: =676
+        Y: =0.00
+        ZIndex: =1
+
+        Title7_2 As label:
+            Height: =26.99
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14.99
+            Text: =ThisItem.'Name (Title)'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =11.99
+            ZIndex: =1
+
+        Subtitle5_2 As label:
+            Height: =24.29
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =13.49
+            Text: =ThisItem.'Mobile No'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =40.48
+            ZIndex: =2
+
+        Separator6_2 As rectangle:
+            Height: =0.75
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =107.95
+            ZIndex: =5
+
+        Icon12_2 As icon.Trash:
+            Height: =47.98
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Select(Parent);UpdateContext({showDial:true})
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            X: =572
+            Y: =19.49
+            ZIndex: =6
+
+    RectQuickActionBar2_2 As rectangle:
+        Height: =47.98
+        Width: =Parent.Width
+        Y: =0.00
+        ZIndex: =2
+
+    Title1_2 As label:
+        Align: =Align.Center
+        Height: =47.98
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        PaddingRight: =10
+        Size: =13.49
+        Text: ="App name"
+        Width: =Parent.Width
+        Y: =0.00
+        ZIndex: =3
+
+    Dropdown1_2 As dropdown:
+        Height: =29.99
+        Items: =dept//Distinct('Employee Info',Department)
+        PaddingBottom: =7.50
+        PaddingLeft: =7.50
+        Size: =9.75
+        X: =440
+        Y: =133.43
+        ZIndex: =4
+
+    Button6_2 As button:
+        Height: =29.99
+        OnSelect: |-
+            =UpdateContext({showDial:false})
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =11.24
+        Text: ="Yes"
+        Visible: =showDial
+        X: =608
+        Y: =341.83
+        ZIndex: =6
+
+    Button7_2 As button:
+        Height: =29.99
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =11.24
+        Text: ="No"
+        Visible: =showDial
+        X: =608
+        Y: =341.83
+        ZIndex: =7
+
+    Label14_2 As label:
+        Align: =Align.Center
+        Fill: =RGBA(255, 255, 0, 1)
+        Height: =198.65
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =13.49
+        Text: ="Are You sure yo u want to delete?"
+        Visible: =showDial
+        Width: =460
+        X: =308
+        Y: =203.90
+        ZIndex: =8
+
+    Rectangle2_1 As rectangle:
+        Fill: =RGBA(179, 179, 179, 0.55)
+        Height: =575.72
+        Width: =768
+        Y: =0.00
+        ZIndex: =9
+
+    Label15_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(232, 232, 81, 1)
+        Height: =162.67
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =13.49
+        Text: ="Are You sure you want to delete?"
+        Width: =599
+        X: =169
+        Y: =239.88
+        ZIndex: =10
+
+    Button8_1 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =29.99
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =11.24
+        Text: ="Yes"
+        X: =608
+        Y: =415.30
+        ZIndex: =11
+
+    Button9_1 As button:
+        Fill: =RGBA(255, 0, 0, 1)
+        Height: =29.99
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =11.24
+        Text: ="No"
+        X: =608
+        Y: =415.30
+        ZIndex: =12
+

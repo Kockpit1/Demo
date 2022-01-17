@@ -1,0 +1,90 @@
+{
+  "00c5deb6-4408-45b3-89a2-8bd8c151166f": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/5ea451df05d04c9bb090f7529b47c82b",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1539/1.0.1539.2620/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://kockpit.sharepoint.com/sites/KockpitAnalyticspvt.Ltd": {
+        "dataSources": {
+          "Country_City": {
+            "tableName": "12925763-214d-49cf-a0e2-cd866267ce50"
+          },
+          "Employee Info": {
+            "tableName": "94be325f-401d-4eaf-82e8-c04600e9ed54"
+          },
+          "ImageBinding": {
+            "tableName": "0d85e417-083d-4cc2-ac18-29b45d2a26be"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Country_City",
+      "Employee Info",
+      "ImageBinding"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "00c5deb6-4408-45b3-89a2-8bd8c151166f"
+  },
+  "d585cb9a-dd76-4cd6-9caa-9a348cbe9fa3": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_googlesheet/connections/030c15b2f726466197499526f604fadc",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Google Sheets",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1521/1.0.1521.2572/googlesheet/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_googlesheet",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "1a4vGpdDF3JX-J1E84x8rJlyEVeQ0X0rKqEh4A3xGkfI": {
+        "dataSources": {
+          "Sheet1": {
+            "tableName": "0"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Sheet1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "d585cb9a-dd76-4cd6-9caa-9a348cbe9fa3"
+  },
+  "ef25ce69-c8ea-4b72-94b7-dc466cd8ebd3": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_livechat/connections/61665ea3b99249158d023a8d95d9376b",
+    "connectionParameters": {
+      "sku": "Enterprise",
+      "username": "amruta.pawar@kockpit.in"
+    },
+    "connectionRef": {
+      "apiTier": "Premium",
+      "displayName": "LiveChat",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/livechat/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_livechat",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "LiveChat"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ef25ce69-c8ea-4b72-94b7-dc466cd8ebd3"
+  }
+}

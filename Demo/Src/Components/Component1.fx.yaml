@@ -1,0 +1,37 @@
+Component1 As CanvasComponent:
+    Fill: =RGBA(240, 240, 240, 1)
+    Height: =Max(App.Height, App.MinScreenHeight)
+    Width: =Max(App.Width, App.MinScreenWidth)/5
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Icon8 As icon.Hamburger:
+        Height: =47.98
+        Icon: =Icon.Hamburger
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Y: =1.50
+        ZIndex: =1
+
+    Gallery6 As gallery.galleryVertical:
+        Height: =383.81
+        Items: =CustomGallerySample
+        Layout: =Layout.Vertical
+        TemplatePadding: =3.75
+        TemplateSize: =87.71
+        Width: =185
+        Y: =38.98
+        ZIndex: =2
+
+        Icon10 As icon.Waffle:
+            Height: =41.98
+            Icon: =Icon.Waffle
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Width: =49
+            X: =6
+            Y: =35.98
+            ZIndex: =1
+

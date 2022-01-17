@@ -1,0 +1,121 @@
+"Chatscreen_1 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: =If(User().Email="demo@Kockpit.onmicrosoft.com",Label8.Text=true,false)
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        Height: =867
+        Items: =Sheet1
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        Y: =91
+        ZIndex: =1
+
+        Separator8 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
+        Label7 As label:
+            OnSelect: =Select(Parent)
+            Text: =
+            X: =40
+            Y: =40
+            ZIndex: =5
+
+        Label8 As label:
+            Height: =93
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Message
+            Width: =263
+            X: =40
+            Y: =6
+            ZIndex: =6
+
+    RectQuickActionBar5_1 As rectangle:
+        Height: =79.46
+        Width: =Parent.Width
+        Y: =0.00
+        ZIndex: =2
+
+    TextInput5_1 As text:
+        Default: =""
+        Height: =66
+        HintText: ="Type Message Here....."
+        PaddingBottom: =3.75
+        PaddingLeft: =9.00
+        RadiusBottomLeft: =35
+        RadiusBottomRight: =35
+        RadiusTopLeft: =35
+        RadiusTopRight: =35
+        Size: =14.99
+        Width: =640
+        Y: =958
+        ZIndex: =4
+
+    Icon15_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =41
+        Icon: =Icon.BackArrow
+        OnSelect: |+
+            =Back();
+            
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =49
+        Y: =20
+        ZIndex: =5
+
+    Label21_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =74.96
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =14.99
+        Text: =Gallery9.Selected.'Full Name'
+        Width: =410
+        X: =115
+        Y: =4
+        ZIndex: =6
+
+    Icon1_1 As icon.Send:
+        Height: =58.47
+        Icon: =Icon.Send
+        OnSelect: |+
+            =Patch(Chats,Defaults(Chats),{creb7_name:"New 2 ",creb7_from:myemail,To:personEmail2,creb7_message:TextInput5_1.Text,creb7_datetime:Now()});
+            Refresh(Chats);
+            Reset(TextInput5);
+            Reset(Gallery13);
+            
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =92
+        X: =545
+        Y: =965
+        ZIndex: =7
+
+    Icon2_1 As icon.Trash:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =31.48
+        Icon: =Icon.Trash
+        OnSelect: =
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =48
+        X: =575
+        Y: =23.99
+        ZIndex: =10
+
+    Image4_1 As image:
+        Height: =56.97
+        Image: ='portrait cheerful woman'
+        PaddingBottom: =0.00
+        PaddingLeft: =0.00
+        Width: =96
+        X: =49
+        Y: =12
+        ZIndex: =11
+

@@ -1,0 +1,146 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "creb7_chats",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "creb7_chat",
+    "MaxGetRowsCount": 500,
+    "Name": "Chats",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "creb7_chat_AsyncOperations": "System Jobs",
+      "creb7_chat_BulkDeleteFailures": "Bulk Delete Failures",
+      "creb7_chat_DuplicateBaseRecord": "Duplicate Records (creb7_chat_DuplicateBaseRecord)",
+      "creb7_chat_DuplicateMatchingRecord": "Duplicate Records (creb7_chat_DuplicateMatchingRecord)",
+      "creb7_chat_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "creb7_chat_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "creb7_chat_ProcessSession": "Process Sessions",
+      "creb7_chat_SyncErrors": "Sync Errors",
+      "creb7_chatid": "Chat",
+      "creb7_datetime": "DateTime",
+      "creb7_from": "From",
+      "creb7_fromname": "From1",
+      "creb7_message": "Message",
+      "creb7_name": "Name",
+      "creb7_read": "Read",
+      "creb7_read2": "Read2",
+      "creb7_readstatus": "Readstatus",
+      "creb7_to": "To",
+      "creb7_toname": "To1",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Chats",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Chats (Views)",
+    "Name": "_creb7_chat_views",
+    "RelatedEntityName": "Chats",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "423b7111-3f49-45c3-a7ee-dd959e4dfd19": "Chat Lookup View",
+      "9b045429-da18-4472-a177-571fb41614d3": "Chat Associated View",
+      "ba69c0b7-647c-45f8-afa7-fa4b2d8f8506": "Chat Advanced Find View",
+      "e68ba024-195a-4f5e-8425-2f6ee2e94e41": "Inactive Chats",
+      "ed9d9f8d-6e14-4135-9cd9-59b2ec34aa48": "Active Chats"
+    }
+  },
+  {
+    "DisplayName": "Status (Chats)",
+    "Name": "creb7_chat_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Chats"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Chats",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Chats)",
+    "Name": "creb7_chat_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Chats"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Chats",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Read2 (Chats)",
+    "Name": "creb7_creb7_chat_read2",
+    "OptionSetInfoNameMapping": {
+      "0": "false",
+      "1": "true"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "creb7_read2",
+        "OptionSetReferenceEntityName": "Chats"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "creb7_read2",
+    "RelatedEntityName": "Chats",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Read",
+    "Name": "creb7_read",
+    "OptionSetInfoNameMapping": {
+      "310330000": "Yes",
+      "310330001": "No"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "creb7_read",
+        "OptionSetReferenceEntityName": "Chats"
+      }
+    },
+    "OptionSetTypeKey": "MultiSelectPicklistType",
+    "RelatedColumnInvariantName": "creb7_read",
+    "RelatedEntityName": "Chats",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "DataEntityMetadataJson": {
+    "0": "{\"name\":\"0\",\"title\":\"Sheet1\",\"x-ms-permission\":\"read-write\",\"schema\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"Message\":{\"type\":\"string\",\"x-ms-keyOrder\":0,\"x-ms-keyType\":\"none\",\"x-ms-sort\":\"none\",\"x-ms-summary\":\"Message\"},\"Time\":{\"type\":\"string\",\"x-ms-keyOrder\":0,\"x-ms-keyType\":\"none\",\"x-ms-sort\":\"none\",\"x-ms-summary\":\"Time\"},\"User\":{\"type\":\"string\",\"x-ms-keyOrder\":0,\"x-ms-keyType\":\"none\",\"x-ms-sort\":\"none\",\"x-ms-summary\":\"User\"},\"__PowerAppsId__\":{\"type\":\"string\",\"x-ms-keyOrder\":1,\"x-ms-keyType\":\"primary\",\"x-ms-sort\":\"none\",\"x-ms-summary\":\"__PowerAppsId__\",\"x-ms-permission\":\"read-only\"}}}}}"
+  },
+  "EntityName": "Sheet1",
+  "TableName": "0"
+}

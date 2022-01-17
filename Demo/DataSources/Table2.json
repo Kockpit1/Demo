@@ -1,0 +1,23 @@
+[
+  {
+    "Data": "[{\"Department\":\"Development\",\"Leave Type\":\"Medical \",\"Manager\":\"Shriraj das\",\"Title\":\"I am suffering from cold\",\"end date\":\"9/9/2021 12:00:00 AM\",\"leave status\":\"Approve\",\"no of day\":1,\"start date \":\"9/9/2021 12:00:00 AM\"},{\"Department\":\"Development\",\"Leave Type\":\"Casual\",\"Manager\":\"Shriraj das\",\"Title\":\"Need Leave\",\"end date\":\"08-13-2021\",\"leave status\":\"Pending\",\"no of day\":3,\"start date \":\"11/8/2021 12:00:00 AM\"},{\"Department\":\"Development\",\"Leave Type\":\"maternity\",\"Manager\":\"dhruv shaha\",\"Title\":\"My Leave\",\"end date\":\"08-22-2021\",\"leave status\":\"Approve\",\"no of day\":2,\"start date \":\"08-21-2021\"},{\"Department\":\"Development\",\"Leave Type\":\"Qurantine\",\"Manager\":\"dhruv shaha\",\"Title\":\"Due to covid\",\"end date\":\"9/8/2021 12:00:00 AM\",\"leave status\":\"Approve\",\"no of day\":8,\"start date \":\"2/8/2021 12:00:00 AM\"},{\"Department\":\"Development\",\"Leave Type\":\"casual\",\"Manager\":\"dhruv shaha\",\"Title\":\"need Leave\",\"end date\":\"08-21-2021\",\"leave status\":\"Pending\",\"no of day\":3,\"start date \":\"08-19-2021\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Table2",
+    "OrderedColumnNames": [
+      "Title",
+      "Department",
+      "Manager",
+      "start date ",
+      "end date",
+      "no of day",
+      "leave status",
+      "Leave Type"
+    ],
+    "OriginalName": "Table2",
+    "OriginalSchema": "*[Department:s, 'Leave Type':s, Manager:s, Title:s, 'end date':s, 'leave status':s, 'no of day':n, 'start date ':s]",
+    "Schema": "*[Department:s, 'Leave Type':s, Manager:s, Title:s, 'end date':s, 'leave status':s, 'no of day':n, 'start date ':s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]

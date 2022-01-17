@@ -1,0 +1,501 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://india-001.azure-apim.net/apim/livechat" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="LiveChat" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="LiveChat">LiveChat is an online customer service software with live support, help desk software and web analytics capabilities.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://india-001.azure-apim.net/apim/livechat" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="WebhookRequest_url_def" />
+      <object name="WebhookRequest">
+        <property name="url" type="string" />
+      </object>
+      <string name="Createticket_Request_message_def" />
+      <string name="Createticket_Request_requester_def_mail_def" />
+      <string name="Createticket_Request_requester_def_name_def" />
+      <object name="Createticket_Request_requester_def">
+        <property name="mail" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <string name="Createticket_Request_subject_def" />
+      <string name="Createticket_Request_assignee_def_id_def" />
+      <object name="Createticket_Request_assignee_def">
+        <property name="id" type="string" />
+      </object>
+      <string name="Createticket_Request_source_def_type_def" />
+      <string name="Createticket_Request_source_def_url_def" />
+      <object name="Createticket_Request_source_def">
+        <property name="type" type="string" />
+        <property name="url" type="string" />
+      </object>
+      <object name="Createticket_Request">
+        <property name="message" type="string" />
+        <property name="requester" typeRef="Createticket_Request_requester_def" />
+        <property name="subject" type="string" />
+        <property name="assignee" typeRef="Createticket_Request_assignee_def" />
+        <property name="source" typeRef="Createticket_Request_source_def" />
+      </object>
+      <string name="Updateticket_Request_message_def" />
+      <string name="Updateticket_Request_requester_def_mail_def" />
+      <string name="Updateticket_Request_requester_def_name_def" />
+      <object name="Updateticket_Request_requester_def">
+        <property name="mail" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <string name="Updateticket_Request_subject_def" />
+      <string name="Updateticket_Request_assignee_def_id_def" />
+      <object name="Updateticket_Request_assignee_def">
+        <property name="id" type="string" />
+      </object>
+      <string name="Updateticket_Request_source_def_type_def" />
+      <string name="Updateticket_Request_source_def_url_def" />
+      <object name="Updateticket_Request_source_def">
+        <property name="type" type="string" />
+        <property name="url" type="string" />
+      </object>
+      <object name="Updateticket_Request">
+        <property name="message" type="string" />
+        <property name="requester" typeRef="Updateticket_Request_requester_def" />
+        <property name="subject" type="string" />
+        <property name="assignee" typeRef="Updateticket_Request_assignee_def" />
+        <property name="source" typeRef="Updateticket_Request_source_def" />
+      </object>
+      <string name="WebhookChatResponse_chat_def_agents_def_items_def_login_def" />
+      <string name="WebhookChatResponse_chat_def_agents_def_items_def_name_def" />
+      <object name="WebhookChatResponse_chat_def_agents_def_items_def">
+        <property name="login" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <array typeRef="WebhookChatResponse_chat_def_agents_def_items_def" name="WebhookChatResponse_chat_def_agents_def" />
+      <string name="WebhookChatResponse_chat_def_ended_timestamp_def" />
+      <string name="WebhookChatResponse_chat_def_events_def_items_def_text_def" />
+      <string name="WebhookChatResponse_chat_def_events_def_items_def_timestamp_def" />
+      <string name="WebhookChatResponse_chat_def_events_def_items_def_type_def" />
+      <string name="WebhookChatResponse_chat_def_events_def_items_def_user_type_def" />
+      <object name="WebhookChatResponse_chat_def_events_def_items_def">
+        <property name="text" type="string" />
+        <property name="timestamp" type="string" />
+        <property name="type" type="string" />
+        <property name="user_type" type="string" />
+      </object>
+      <array typeRef="WebhookChatResponse_chat_def_events_def_items_def" name="WebhookChatResponse_chat_def_events_def" />
+      <integer name="WebhookChatResponse_chat_def_groups_def_items_def" />
+      <array type="integer" name="WebhookChatResponse_chat_def_groups_def" />
+      <string name="WebhookChatResponse_chat_def_id_def" />
+      <string name="WebhookChatResponse_chat_def_messages_def_items_def_agent_id_def" />
+      <string name="WebhookChatResponse_chat_def_messages_def_items_def_author_name_def" />
+      <string name="WebhookChatResponse_chat_def_messages_def_items_def_text_def" />
+      <string name="WebhookChatResponse_chat_def_messages_def_items_def_timestamp_def" />
+      <string name="WebhookChatResponse_chat_def_messages_def_items_def_user_type_def" />
+      <object name="WebhookChatResponse_chat_def_messages_def_items_def">
+        <property name="agent_id" type="string" />
+        <property name="author_name" type="string" />
+        <property name="text" type="string" />
+        <property name="timestamp" type="string" />
+        <property name="user_type" type="string" />
+      </object>
+      <array typeRef="WebhookChatResponse_chat_def_messages_def_items_def" name="WebhookChatResponse_chat_def_messages_def" />
+      <string name="WebhookChatResponse_chat_def_started_timestamp_def" />
+      <string name="WebhookChatResponse_chat_def_tags_def_items_def" />
+      <array type="string" name="WebhookChatResponse_chat_def_tags_def" />
+      <string name="WebhookChatResponse_chat_def_url_def" />
+      <object name="WebhookChatResponse_chat_def">
+        <property name="agents" typeRef="WebhookChatResponse_chat_def_agents_def" />
+        <property name="ended_timestamp" type="string" />
+        <property name="events" typeRef="WebhookChatResponse_chat_def_events_def" />
+        <property name="groups" typeRef="WebhookChatResponse_chat_def_groups_def" />
+        <property name="id" type="string" />
+        <property name="messages" typeRef="WebhookChatResponse_chat_def_messages_def" />
+        <property name="started_timestamp" type="string" />
+        <property name="tags" typeRef="WebhookChatResponse_chat_def_tags_def" />
+        <property name="url" type="string" />
+      </object>
+      <string name="WebhookChatResponse_event_unique_id_def" />
+      <string name="WebhookChatResponse_pre_chat_survey_def_items_def_answer_def" />
+      <string name="WebhookChatResponse_pre_chat_survey_def_items_def_id_def" />
+      <string name="WebhookChatResponse_pre_chat_survey_def_items_def_label_def" />
+      <object name="WebhookChatResponse_pre_chat_survey_def_items_def">
+        <property name="answer" type="string" />
+        <property name="id" type="string" />
+        <property name="label" type="string" />
+      </object>
+      <array typeRef="WebhookChatResponse_pre_chat_survey_def_items_def" name="WebhookChatResponse_pre_chat_survey_def" />
+      <string name="WebhookChatResponse_token_def" />
+      <string name="WebhookChatResponse_visitor_def_email_def" />
+      <string name="WebhookChatResponse_visitor_def_id_def" />
+      <string name="WebhookChatResponse_visitor_def_language_def" />
+      <string name="WebhookChatResponse_visitor_def_name_def" />
+      <string name="WebhookChatResponse_visitor_def_page_current_def" />
+      <object name="WebhookChatResponse_visitor_def">
+        <property name="email" type="string" />
+        <property name="id" type="string" />
+        <property name="language" type="string" />
+        <property name="name" type="string" />
+        <property name="page_current" type="string" />
+      </object>
+      <object name="WebhookChatResponse">
+        <property name="chat" typeRef="WebhookChatResponse_chat_def" />
+        <property name="event_unique_id" type="string" />
+        <property name="pre_chat_survey" typeRef="WebhookChatResponse_pre_chat_survey_def" />
+        <property name="token" type="string" />
+        <property name="visitor" typeRef="WebhookChatResponse_visitor_def" />
+      </object>
+      <string name="WebhookTicketResponse_ticket_def_assignee_def_id_def" />
+      <string name="WebhookTicketResponse_ticket_def_assignee_def_name_def" />
+      <object name="WebhookTicketResponse_ticket_def_assignee_def">
+        <property name="id" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <string name="WebhookTicketResponse_ticket_def_events_def_items_def_author_def_id_def" />
+      <string name="WebhookTicketResponse_ticket_def_events_def_items_def_author_def_name_def" />
+      <string name="WebhookTicketResponse_ticket_def_events_def_items_def_author_def_type_def" />
+      <object name="WebhookTicketResponse_ticket_def_events_def_items_def_author_def">
+        <property name="id" type="string" />
+        <property name="name" type="string" />
+        <property name="type" type="string" />
+      </object>
+      <dateTimeString name="WebhookTicketResponse_ticket_def_events_def_items_def_date_def" />
+      <boolean name="WebhookTicketResponse_ticket_def_events_def_items_def_is_private_def" />
+      <string name="WebhookTicketResponse_ticket_def_events_def_items_def_message_def" />
+      <string name="WebhookTicketResponse_ticket_def_events_def_items_def_source_def_type_def" />
+      <string name="WebhookTicketResponse_ticket_def_events_def_items_def_source_def_url_def" />
+      <object name="WebhookTicketResponse_ticket_def_events_def_items_def_source_def">
+        <property name="type" type="string" />
+        <property name="url" type="string" />
+      </object>
+      <string name="WebhookTicketResponse_ticket_def_events_def_items_def_type_def" />
+      <object name="WebhookTicketResponse_ticket_def_events_def_items_def">
+        <property name="author" typeRef="WebhookTicketResponse_ticket_def_events_def_items_def_author_def" />
+        <property name="date" typeRef="WebhookTicketResponse_ticket_def_events_def_items_def_date_def" />
+        <property name="is_private" type="boolean" />
+        <property name="message" type="string" />
+        <property name="source" typeRef="WebhookTicketResponse_ticket_def_events_def_items_def_source_def" />
+        <property name="type" type="string" />
+      </object>
+      <array typeRef="WebhookTicketResponse_ticket_def_events_def_items_def" name="WebhookTicketResponse_ticket_def_events_def" />
+      <integer name="WebhookTicketResponse_ticket_def_groups_def_items_def_id_def" />
+      <string name="WebhookTicketResponse_ticket_def_groups_def_items_def_name_def" />
+      <object name="WebhookTicketResponse_ticket_def_groups_def_items_def">
+        <property name="id" type="integer" />
+        <property name="name" type="string" />
+      </object>
+      <array typeRef="WebhookTicketResponse_ticket_def_groups_def_items_def" name="WebhookTicketResponse_ticket_def_groups_def" />
+      <string name="WebhookTicketResponse_ticket_def_id_def" />
+      <string name="WebhookTicketResponse_ticket_def_requester_def_ip_def" />
+      <string name="WebhookTicketResponse_ticket_def_requester_def_mail_def" />
+      <string name="WebhookTicketResponse_ticket_def_requester_def_name_def" />
+      <object name="WebhookTicketResponse_ticket_def_requester_def">
+        <property name="ip" type="string" />
+        <property name="mail" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <string name="WebhookTicketResponse_ticket_def_source_def_id_def" />
+      <string name="WebhookTicketResponse_ticket_def_source_def_type_def" />
+      <string name="WebhookTicketResponse_ticket_def_source_def_url_def" />
+      <object name="WebhookTicketResponse_ticket_def_source_def">
+        <property name="id" type="string" />
+        <property name="type" type="string" />
+        <property name="url" type="string" />
+      </object>
+      <string name="WebhookTicketResponse_ticket_def_status_def" />
+      <string name="WebhookTicketResponse_ticket_def_subject_def" />
+      <string name="WebhookTicketResponse_ticket_def_tags_def_items_def" />
+      <array type="string" name="WebhookTicketResponse_ticket_def_tags_def" />
+      <object name="WebhookTicketResponse_ticket_def">
+        <property name="assignee" typeRef="WebhookTicketResponse_ticket_def_assignee_def" />
+        <property name="events" typeRef="WebhookTicketResponse_ticket_def_events_def" />
+        <property name="groups" typeRef="WebhookTicketResponse_ticket_def_groups_def" />
+        <property name="id" type="string" />
+        <property name="requester" typeRef="WebhookTicketResponse_ticket_def_requester_def" />
+        <property name="source" typeRef="WebhookTicketResponse_ticket_def_source_def" />
+        <property name="status" type="string" />
+        <property name="subject" type="string" />
+        <property name="tags" typeRef="WebhookTicketResponse_ticket_def_tags_def" />
+      </object>
+      <string name="WebhookTicketResponse_token_def" />
+      <object name="WebhookTicketResponse">
+        <property name="ticket" typeRef="WebhookTicketResponse_ticket_def" />
+        <property name="token" type="string" />
+      </object>
+      <dateTimeString name="ListTicketsResponse_items_def_date_def" />
+      <string name="ListTicketsResponse_items_def_id_def" />
+      <dateTimeString name="ListTicketsResponse_items_def_modified_def" />
+      <string name="ListTicketsResponse_items_def_requester_def_ip_def" />
+      <string name="ListTicketsResponse_items_def_requester_def_mail_def" />
+      <string name="ListTicketsResponse_items_def_requester_def_name_def" />
+      <object name="ListTicketsResponse_items_def_requester_def">
+        <property name="ip" type="string" />
+        <property name="mail" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <string name="ListTicketsResponse_items_def_source_def_id_def" />
+      <string name="ListTicketsResponse_items_def_source_def_type_def" />
+      <string name="ListTicketsResponse_items_def_source_def_url_def" />
+      <object name="ListTicketsResponse_items_def_source_def">
+        <property name="id" type="string" />
+        <property name="type" type="string" />
+        <property name="url" type="string" />
+      </object>
+      <string name="ListTicketsResponse_items_def_status_def" />
+      <string name="ListTicketsResponse_items_def_subject_def" />
+      <object name="ListTicketsResponse_items_def">
+        <property name="date" typeRef="ListTicketsResponse_items_def_date_def" />
+        <property name="id" type="string" />
+        <property name="modified" typeRef="ListTicketsResponse_items_def_modified_def" />
+        <property name="requester" typeRef="ListTicketsResponse_items_def_requester_def" />
+        <property name="source" typeRef="ListTicketsResponse_items_def_source_def" />
+        <property name="status" type="string" />
+        <property name="subject" type="string" />
+      </object>
+      <array typeRef="ListTicketsResponse_items_def" name="ListTicketsResponse" />
+      <integer name="TicketResponse_currentGroup_def_id_def" />
+      <string name="TicketResponse_currentGroup_def_name_def" />
+      <object name="TicketResponse_currentGroup_def">
+        <property name="id" type="integer" />
+        <property name="name" type="string" />
+      </object>
+      <dateTimeString name="TicketResponse_date_def" />
+      <string name="TicketResponse_events_def_items_def_author_def_id_def" />
+      <string name="TicketResponse_events_def_items_def_author_def_name_def" />
+      <string name="TicketResponse_events_def_items_def_author_def_type_def" />
+      <object name="TicketResponse_events_def_items_def_author_def">
+        <property name="id" type="string" />
+        <property name="name" type="string" />
+        <property name="type" type="string" />
+      </object>
+      <dateTimeString name="TicketResponse_events_def_items_def_date_def" />
+      <boolean name="TicketResponse_events_def_items_def_is_private_def" />
+      <string name="TicketResponse_events_def_items_def_message_def" />
+      <string name="TicketResponse_events_def_items_def_source_def_type_def" />
+      <string name="TicketResponse_events_def_items_def_source_def_url_def" />
+      <object name="TicketResponse_events_def_items_def_source_def">
+        <property name="type" type="string" />
+        <property name="url" type="string" />
+      </object>
+      <string name="TicketResponse_events_def_items_def_type_def" />
+      <object name="TicketResponse_events_def_items_def">
+        <property name="author" typeRef="TicketResponse_events_def_items_def_author_def" />
+        <property name="date" typeRef="TicketResponse_events_def_items_def_date_def" />
+        <property name="is_private" type="boolean" />
+        <property name="message" type="string" />
+        <property name="source" typeRef="TicketResponse_events_def_items_def_source_def" />
+        <property name="type" type="string" />
+      </object>
+      <array typeRef="TicketResponse_events_def_items_def" name="TicketResponse_events_def" />
+      <integer name="TicketResponse_groups_def_items_def_id_def" />
+      <string name="TicketResponse_groups_def_items_def_name_def" />
+      <object name="TicketResponse_groups_def_items_def">
+        <property name="id" type="integer" />
+        <property name="name" type="string" />
+      </object>
+      <array typeRef="TicketResponse_groups_def_items_def" name="TicketResponse_groups_def" />
+      <string name="TicketResponse_id_def" />
+      <string name="TicketResponse_requester_def_ip_def" />
+      <string name="TicketResponse_requester_def_mail_def" />
+      <string name="TicketResponse_requester_def_name_def" />
+      <object name="TicketResponse_requester_def">
+        <property name="ip" type="string" />
+        <property name="mail" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <string name="TicketResponse_source_def_id_def" />
+      <string name="TicketResponse_source_def_type_def" />
+      <string name="TicketResponse_source_def_url_def" />
+      <object name="TicketResponse_source_def">
+        <property name="id" type="string" />
+        <property name="type" type="string" />
+        <property name="url" type="string" />
+      </object>
+      <string name="TicketResponse_status_def" />
+      <string name="TicketResponse_subject_def" />
+      <string name="TicketResponse_tags_def_items_def" />
+      <array type="string" name="TicketResponse_tags_def" />
+      <object name="TicketResponse">
+        <property name="currentGroup" typeRef="TicketResponse_currentGroup_def" />
+        <property name="date" typeRef="TicketResponse_date_def" />
+        <property name="events" typeRef="TicketResponse_events_def" />
+        <property name="groups" typeRef="TicketResponse_groups_def" />
+        <property name="id" type="string" />
+        <property name="requester" typeRef="TicketResponse_requester_def" />
+        <property name="source" typeRef="TicketResponse_source_def" />
+        <property name="status" type="string" />
+        <property name="subject" type="string" />
+        <property name="tags" typeRef="TicketResponse_tags_def" />
+      </object>
+      <string name="ListAgents_Response_items_def_avatar_def" />
+      <string name="ListAgents_Response_items_def_login_def" />
+      <string name="ListAgents_Response_items_def_name_def" />
+      <string name="ListAgents_Response_items_def_permission_def" />
+      <object name="ListAgents_Response_items_def">
+        <property name="avatar" type="string" />
+        <property name="login" type="string" />
+        <property name="name" type="string" />
+        <property name="permission" type="string" />
+      </object>
+      <array typeRef="ListAgents_Response_items_def" name="ListAgents_Response" />
+      <string name="CreateAgent_Request_login_def" />
+      <string name="CreateAgent_Request_name_def" />
+      <string name="CreateAgent_Request_login_status_def" />
+      <string name="CreateAgent_Request_job_title_def" />
+      <string name="CreateAgent_Request_permission_def" />
+      <string name="CreateAgent_Request_password_def" />
+      <string name="CreateAgent_Request_max_chats_count_def" />
+      <object name="CreateAgent_Request">
+        <property name="login" type="string" />
+        <property name="name" type="string" />
+        <property name="login_status" type="string" />
+        <property name="job_title" type="string" />
+        <property name="permission" type="string" />
+        <property name="password" type="string" />
+        <property name="max_chats_count" type="string" />
+      </object>
+      <string name="CreateAgent_Response_avatar_def" />
+      <integer name="CreateAgent_Response_groups_def_items_def_id_def" />
+      <string name="CreateAgent_Response_groups_def_items_def_name_def" />
+      <object name="CreateAgent_Response_groups_def_items_def">
+        <property name="id" type="integer" />
+        <property name="name" type="string" />
+      </object>
+      <array typeRef="CreateAgent_Response_groups_def_items_def" name="CreateAgent_Response_groups_def" />
+      <string name="CreateAgent_Response_job_title_def" />
+      <string name="CreateAgent_Response_login_def" />
+      <string name="CreateAgent_Response_login_status_def" />
+      <integer name="CreateAgent_Response_max_chats_count_def" />
+      <string name="CreateAgent_Response_name_def" />
+      <string name="CreateAgent_Response_permission_def" />
+      <string name="CreateAgent_Response_status_def" />
+      <object name="CreateAgent_Response">
+        <property name="avatar" type="string" />
+        <property name="groups" typeRef="CreateAgent_Response_groups_def" />
+        <property name="job_title" type="string" />
+        <property name="login" type="string" />
+        <property name="login_status" type="string" />
+        <property name="max_chats_count" type="integer" />
+        <property name="name" type="string" />
+        <property name="permission" type="string" />
+        <property name="status" type="string" />
+      </object>
+      <string name="DeleteAgent_Response_result_def" />
+      <object name="DeleteAgent_Response">
+        <property name="result" type="string" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://india-001.azure-apim.net/apim/livechat">
+    <resource path="/{connectionId}/agents">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="ListAgents" visibility="important" siena:isDeprecated="false">
+        <doc title="List agents&#xA;This operation returns a list of all the agents in your LiveChat account." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListAgents_Response" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/agents">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="CreateAgent" visibility="important" siena:isDeprecated="false">
+        <doc title="Create a new agent&#xA;This operation is used to add a new agent to your LiveChat account." />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="login" path="/login" type="xs:string" required="true" />
+            <param style="plain" name="name" path="/name" type="xs:string" required="true" />
+            <param style="plain" name="login_status" path="/login_status" type="xs:string">
+              <option value="accepting chats" />
+              <option value="not accepting chats" />
+            </param>
+            <param style="plain" name="job_title" path="/job_title" type="xs:string" />
+            <param style="plain" name="permission" path="/permission" type="xs:string">
+              <option value="administrator" />
+              <option value="normal" />
+            </param>
+            <param style="plain" name="password" path="/password" type="xs:string" />
+            <param style="plain" name="max_chats_count" path="/max_chats_count" type="xs:string" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:CreateAgent_Response" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/agents/{login}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="login" type="xs:string" required="true">
+        <doc title="The email of the agent." />
+      </param>
+      <method siena:requiresAuthentication="true" name="DELETE" id="DeleteAgent" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Remove an agent&#xA;This operation is used to delete an agent from your LiveChat account." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:DeleteAgent_Response" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/tickets">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="ListTickets" visibility="advanced" siena:isDeprecated="false">
+        <doc title="List tickets&#xA;This operation returns a list of tickets in your LiveChat account." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListTicketsResponse" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/tickets">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="CreateTicket" visibility="important" siena:isDeprecated="false">
+        <doc title="Create a new ticket&#xA;This operation is used to add a new ticket to your LiveChat account." />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="message" path="/message" type="xs:string" required="true" />
+            <param style="plain" name="requester" path="/requester" type="service:Createticket_Request_requester_def" required="true" />
+            <param style="plain" name="subject" path="/subject" type="xs:string" />
+            <param style="plain" name="assignee" path="/assignee" type="service:Createticket_Request_assignee_def" />
+            <param style="plain" name="source" path="/source" type="service:Createticket_Request_source_def" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:TicketResponse" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/tickets/{ticketId}/tags">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="ticketId" type="xs:string" required="true">
+        <doc title="The id of the ticket" />
+      </param>
+      <method siena:requiresAuthentication="true" name="PUT" id="UpdateTicket" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Update ticket&#xA;This operation is used to update the details of an existing ticket in your LiveChat account." />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="message" path="/message" type="xs:string" />
+            <param style="plain" name="requester" path="/requester" type="service:Updateticket_Request_requester_def" />
+            <param style="plain" name="subject" path="/subject" type="xs:string" />
+            <param style="plain" name="assignee" path="/assignee" type="service:Updateticket_Request_assignee_def" />
+            <param style="plain" name="source" path="/source" type="service:Updateticket_Request_source_def" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:TicketResponse" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/tickets/{ticketId}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="ticketId" type="xs:string" required="true">
+        <doc title="The id of the ticket" />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetTicket" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Get ticket&#xA;This operation is used to fetch the details of a specific ticket in your LiveChat account." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:TicketResponse" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_livechat" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

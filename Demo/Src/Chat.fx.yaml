@@ -1,0 +1,33 @@
+"Chat As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =
+    OnVisible: =Refresh(Chats);
+
+    RectQuickActionBar3 As rectangle:
+        Height: =65.97
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName2 As label:
+        Align: =Align.Center
+        Height: =45
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =13.49
+        Text: ="Contact"
+        Width: =623
+        X: =8
+        Y: =9
+        ZIndex: =2
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =581
+        Items: =mycontact
+        Size: =9.75
+        Width: =640
+        X: =0
+        Y: =91
+        ZIndex: =8
+

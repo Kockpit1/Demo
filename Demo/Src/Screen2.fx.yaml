@@ -1,0 +1,7 @@
+Screen2 As screen:
+    Fill: |-
+        =LiveChat.CreateAgent({'demo@Kockpit.onmicrosoft.com:',"",{login_status:true,max_chats_count:200,job_title:"",permission:"normal",password:""}})
+    OnVisible: |-
+        =LiveChat.CreateAgent("demo@Kockpit.onmicrosoft.com
+        ","Demo"{login_status:true,max_chats_count:200,job_title:""})
+

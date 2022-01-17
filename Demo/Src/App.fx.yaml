@@ -1,0 +1,19 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |+
+        =Set(myemail,User().Email);
+        Set(popup,false);
+        ClearCollect(
+            UserView,
+            {
+                Title: "ContactScreen",
+                TargetScreen: ContactScreen
+            },
+            {
+                Title: "Chatscreen",
+                TargetScreen: Chatscreen
+            });
+        
+    StartScreen: |-
+        =LiveChat.CreateAgent("amruta.pawar@kockpit.in","Amruta",{login_status:true,job_title:"",permission:"normal",password:"",max_chats_count:200})
+

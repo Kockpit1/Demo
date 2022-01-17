@@ -1,0 +1,13 @@
+Screen1 As screen:
+
+    BarcodeScanner1 As barcodeScanner:
+        BarcodeType: =BarcodeType.DataMatrix
+        Height: =210
+        OnCancel: =true
+        OnScan: =true
+        Text: ="Scan"
+        Width: =513
+        X: =60
+        Y: =370
+        ZIndex: =4
+

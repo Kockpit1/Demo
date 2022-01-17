@@ -1,0 +1,22 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_googlesheet",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2021-10-06T17:08:28.6500000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "__PowerAppsId__",
+      "Message": "Message",
+      "Time": "Time",
+      "User": "User"
+    },
+    "DatasetName": "1a4vGpdDF3JX-J1E84x8rJlyEVeQ0X0rKqEh4A3xGkfI",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Sheet1",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

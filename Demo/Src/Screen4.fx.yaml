@@ -1,0 +1,59 @@
+Screen4 As screen:
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =663.43
+        Items: =Sheet1
+        Layout: =Layout.Vertical
+        TemplatePadding: =0.00
+        TemplateSize: =119.94
+        Y: =0.00
+        ZIndex: =1
+
+        Title4 As label:
+            Height: =26.99
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =14.99
+            Text: =
+            VerticalAlign: =VerticalAlign.Top
+            Width: =
+            X: =
+            Y: =32.98
+            ZIndex: =2
+
+        Subtitle3 As label:
+            Height: =34.48
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =13.49
+            Text: ="hELLO"
+            VerticalAlign: =VerticalAlign.Top
+            Width: =225
+            X: =543
+            Y: =85.46
+            ZIndex: =3
+
+        Separator3 As rectangle:
+            Height: =0.75
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =119.19
+            ZIndex: =5
+
+        Label3 As label:
+            Height: =119.19
+            OnSelect: =Select(Parent)
+            PaddingBottom: =3.75
+            PaddingLeft: =3.75
+            Size: =9.75
+            Text: ="welcome to power app"
+            Width: =250
+            Y: =0.00
+            ZIndex: =6
+

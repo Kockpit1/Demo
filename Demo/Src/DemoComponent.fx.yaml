@@ -1,0 +1,87 @@
+DemoComponent As screen:
+    OnVisible: |-
+        =ClearCollect(
+            GallNav,
+            {
+                Id: 1,
+                icon: 'revolt-rv400',
+                Qty: 20
+            },
+            {
+                Id: 2,
+                icon: 'intro-bike',
+                Qty: 40
+            },
+            {
+                Id: 3,
+                icon: 'yamaha-bike-500x500',
+                Qty: 5
+            }
+        )
+
+    ItemComponent_1 As ItemComponent:
+        DefaultIn: =Gallery5.Selected.Qty
+        Height: =152.18
+        OnReset: =Set(MyPurchaseNo,ItemComponent_1.DefaultIn)
+        Width: =663
+        X: =105
+        Y: =0.00
+
+    Gallery5 As gallery.galleryVertical:
+        Height: =476.77
+        Items: =GallNav
+        Layout: =Layout.Vertical
+        TemplateFill: =If(ThisItem.IsSelected,LightBlue,RGBA(0, 0, 0, 0))
+        TemplatePadding: =3.75
+        TemplateSize: =139.43
+        Width: =669
+        X: =40
+        Y: =22.49
+        ZIndex: =2
+
+        Image1 As image:
+            Height: =106.45
+            Image: =ThisItem.icon
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0.00
+            PaddingLeft: =0.00
+            Width: =251
+            X: =62
+            Y: =16.49
+            ZIndex: =1
+
+        Label12 As label:
+            Height: =43.48
+            OnSelect: =Select(Parent)
+            PaddingBottom: =3.75
+            PaddingLeft: =3.75
+            Size: =14.99
+            Text: ="Order Number"
+            X: =390
+            Y: =16.49
+            ZIndex: =2
+
+        Label13 As label:
+            Height: =29.99
+            OnSelect: =Select(Parent)
+            PaddingBottom: =3.75
+            PaddingLeft: =3.75
+            Size: =18.74
+            Text: =ThisItem.Qty
+            X: =390
+            Y: =77.96
+            ZIndex: =3
+
+    Button5 As button:
+        Height: =74.21
+        OnSelect: |
+            =Update(GallNav,First(Filter(GallNav,Id=Gallery5.Selected.Id)),{Id:Gallery5.Selected.Id,icon:Gallery5.Selected.icon,Qty:ItemComponent_1.OutNumber})
+        PaddingBottom: =3.75
+        PaddingLeft: =3.75
+        Size: =18.74
+        Text: ="Update Number"
+        Width: =362
+        X: =406
+        Y: =182.91
+        ZIndex: =3
+
