@@ -1,10 +1,10 @@
 {
   "QualifiedValues": [
     {
-      "Kind": "default.cds_sharepointsite_forms",
-      "Namespace": "SharePoint Sites (Forms)",
+      "Kind": "default.cds_creb7_chat_forms",
+      "Namespace": "Chats (Forms)",
       "Values": {
-        "Information": "ba6522af-e71b-df11-aa01-00155d2a9006"
+        "Information": "e09b294a-b2a2-46ff-b7e7-fe02e05ec213"
       }
     },
     {
@@ -31,10 +31,10 @@
       }
     },
     {
-      "Kind": "default.cds_creb7_chat_forms",
-      "Namespace": "Chats (Forms)",
+      "Kind": "default.cds_sharepointsite_forms",
+      "Namespace": "SharePoint Sites (Forms)",
       "Values": {
-        "Information": "e09b294a-b2a2-46ff-b7e7-fe02e05ec213"
+        "Information": "ba6522af-e71b-df11-aa01-00155d2a9006"
       }
     },
     {
